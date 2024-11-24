@@ -17,20 +17,18 @@ public class Main {
         System.out.println("Задание 2");
 
         int temp = 6;
-        if (temp < 5) {
+        if (temp <= 5) {
             System.out.println("На улице " + temp + " градусов, нужно надеть шапку");
-        }
-        if (temp > 5) {
+        } else {
             System.out.println("На улице " + temp + " градусов, можно идти без шапки");
         }
 
         System.out.println("Задание 3");
 
         int speed = 59;
-        if (speed < 60) {
+        if (speed <= 60) {
             System.out.println("Если скорость " + speed +  ", то можно ездить спокойно");
-        }
-        if (speed > 60) {
+        } else {
             System.out.println("Если скорость " + speed +  ", то придется заплатить штраф");
         }
 
@@ -51,9 +49,9 @@ public class Main {
         System.out.println("Задание 5");
 
         int babyAge = 10;
-        if (babyAge < 5){
+        if (babyAge <= 5){
             System.out.println("Если возраст ребенка равен " + babyAge + ", то ему нельзя кататься на аттракционе");
-        } else if (babyAge > 5 && babyAge < 14){
+        } else if (babyAge > 5 && babyAge <= 14){
             System.out.println("Если возраст ребенка равен " + babyAge + ", то ему можно кататься на аттракционе в сопровождении взрослого");
         } else if (babyAge > 14){
             System.out.println("Если возраст ребенка равен " + babyAge + ", то ему можно кататься на аттракционе без сопровождения взрослого");
@@ -75,20 +73,32 @@ public class Main {
 
         System.out.println("Задание 7");
 
-        int one = 55;
-        int two = 66;
-        int three = 3;
+        int one = 1;
+        int two = 2;
+        int three = 2;
 
-        if (one > two){
-            if (one > three) {
+        if (one >= two){
+            if (one == two) {
+                if (one > three){
+                    System.out.println(one);
+                } else if (one < three){
+                    System.out.println(three);
+                } else{
+                    System.out.println("Числа равны");
+                }
+            } else if (one > three){
                 System.out.println(one);
-            } else {
+            } else if (one < three){
                 System.out.println(three);
+            } else {
+                System.out.println(one);
             }
         } else if (one < two) {
             if (two < three){
                 System.out.println(three);
-            } else {
+            } else if (two > three){
+                System.out.println(two);
+            } else{
                 System.out.println(two);
             }
         }
